@@ -1,5 +1,287 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to FinanNode #{title}
+  wrapper
+    nav.navbar.navbar-default.navbar-static-top(role='navigation', style='margin-bottom: 0')
+      .navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href='/') FinanNode by Batrako (Prototipo)
+      // /.navbar-header
+      ul.nav.navbar-top-links.navbar-right
+        li.dropdown
+          a.dropdown-toggle(data-toggle='dropdown', href='#')
+            i.fa.fa-tasks.fa-fw
+            i.fa.fa-caret-down
+          ul.dropdown-menu.dropdown-tasks
+            li
+              a(href='#')
+                div
+                  p
+                    strong Vacaciones
+                    span.pull-right.text-muted 40% Consumido
+                  .progress.progress-striped.active
+                    .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width: 40%')
+                      span.sr-only 40% Completado (Exito)
+            li.divider
+            li
+              a(href='#')
+                div
+                  p
+                    strong Mensual
+                    span.pull-right.text-muted 20% Consumido
+                  .progress.progress-striped.active
+                    .progress-bar.progress-bar-info(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%')
+                      span.sr-only 20% Completado
+            li.divider
+            li
+              a(href='#')
+                div
+                  p
+                    strong Limite
+                    span.pull-right.text-muted 60% Completado
+                  .progress.progress-striped.active
+                    .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%')
+                      span.sr-only 60% Completado (atención)
+            li.divider
+            li
+              a(href='#')
+                div
+                  p
+                    strong Lemans
+                    span.pull-right.text-muted 80% Completado
+                  .progress.progress-striped.active
+                    .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
+                      span.sr-only 80% Completado (peligro)
+            li.divider
+            li
+              a.text-center(href='#')
+                strong Ver todas las provisiones
+                i.fa.fa-angle-right
+          // /.dropdown-tasks
+        // /.dropdown
+        li.dropdown
+          a.dropdown-toggle(data-toggle='dropdown', href='#')
+            i.fa.fa-bell.fa-fw
+            i.fa.fa-caret-down
+          ul.dropdown-menu.dropdown-alerts
+            li
+              a(href='#')
+                div
+                  i.glyphicon.glyphicon-transfer
+                  |  Transferencia realizada
+                  span.pull-right.text-muted.small 4 minutes ago
+            li.divider
+            li
+              a(href='#')
+                div
+                  i.fa.fa-twitter.fa-euro
+                  |  Apunte realizado
+                  span.pull-right.text-muted.small 12 minutes ago
+            li.divider
+            li
+              a(href='#')
+                div
+                  i.glyphicon.glyphicon-transfer
+                  |  Transferencia realizada
+                  span.pull-right.text-muted.small 4 minutes ago
+            li.divider
+            li
+              a(href='#')
+                div
+                  i.fa.fa-tasks.fa-bank
+                  |  Cuenta creada
+                  span.pull-right.text-muted.small 4 minutes ago
+            li.divider
+            li
+              a(href='#')
+                div
+                  i.fa.fa-cloud-download
+                  |  Backup Realizado
+                  span.pull-right.text-muted.small 4 minutes ago
+            li.divider
+            li
+              a.text-center(href='#')
+                strong Ver Todas las Alertas
+                i.fa.fa-angle-right
+          // /.dropdown-alerts
+        // /.dropdown
+        li.dropdown
+          a.dropdown-toggle(data-toggle='dropdown', href='#')
+            i.fa.fa-user.fa-fw
+            i.fa.fa-caret-down
+          ul.dropdown-menu.dropdown-user
+            li
+              a(href='#')
+                i.fa.fa-user.fa-fw
+                |  Datos de Usuario
+            li
+              a(href='#')
+                i.fa.fa-gear.fa-fw
+                |  Preferencias
+            li.divider
+            li
+              a(href='login.html')
+                i.fa.fa-sign-out.fa-fw
+                |  Logout
+          // /.dropdown-user
+        // /.dropdown
+      // /.navbar-top-links
+      .navbar-default.sidebar(role='navigation')
+        .sidebar-nav.navbar-collapse
+          ul#side-menu.nav
+            li.sidebar-search
+              .input-group.custom-search-form
+                input.form-control(type='text', placeholder='Buscar...')
+                span.input-group-btn
+                  button.btn.btn-default(type='button')
+                    i.fa.fa-search
+              // /input-group
+            li
+              a(href='/')
+                i.fa.fa-dashboard.fa-fw
+                |  Resumen
+            li
+              a(href='#')
+                i.fa.fa-bar-chart-o.fa-fw
+                |  Charts
+                span.fa.arrow
+              ul.nav.nav-second-level
+                li
+                  a(href='flot.html') Flot Charts
+                li
+                  a(href='morris.html') Morris.js Charts
+              // /.nav-second-level
+            li
+              a(href='tables.html')
+                i.fa.fa-table.fa-fw
+                |  Tables
+            li
+              a(href='forms.html')
+                i.fa.fa-edit.fa-fw
+                |  Forms
+            li
+              a(href='#')
+                i.fa.fa-wrench.fa-fw
+                |  UI Elements
+                span.fa.arrow
+              ul.nav.nav-second-level
+                li
+                  a(href='panels-wells.html') Panels and Wells
+                li
+                  a(href='buttons.html') Buttons
+                li
+                  a(href='notifications.html') Notifications
+                li
+                  a(href='typography.html') Typography
+                li
+                  a(href='icons.html')  Icons
+                li
+                  a(href='grid.html') Grid
+              // /.nav-second-level
+            li
+              a(href='#')
+                i.fa.fa-sitemap.fa-fw
+                |  Multi-Level Dropdown
+                span.fa.arrow
+              ul.nav.nav-second-level
+                li
+                  a(href='#') Second Level Item
+                li
+                  a(href='#') Second Level Item
+                li
+                  a(href='#')
+                    | Third Level 
+                    span.fa.arrow
+                  ul.nav.nav-third-level
+                    li
+                      a(href='#') Third Level Item
+                    li
+                      a(href='#') Third Level Item
+                    li
+                      a(href='#') Third Level Item
+                    li
+                      a(href='#') Third Level Item
+                  // /.nav-third-level
+              // /.nav-second-level
+            li
+              a(href='#')
+                i.fa.fa-files-o.fa-fw
+                |  Sample Pages
+                span.fa.arrow
+              ul.nav.nav-second-level
+                li
+                  a(href='blank.html') Blank Page
+                li
+                  a(href='login.html') Login Page
+              // /.nav-second-level
+        // /.sidebar-collapse
+      // /.navbar-static-side
+    #page-wrapper
+      .row
+        .col-lg-12
+          h1.page-header Resumen
+        // /.col-lg-12
+      // /.row
+      .row
+        .col-lg-3.col-md-6
+          .panel.panel-primary
+            .panel-heading
+              .row
+                .col-xs-3
+                  i.fa.fa-money.fa-5x
+                .col-xs-9.text-right
+                  .huge
+                    p 53.615
+                      span
+                      i.fa.fa-euro
+                  div Cuentas
+            a(href='#')
+              .panel-footer
+                span.pull-left Ver Detalles
+                span.pull-right
+                  i.fa.fa-arrow-circle-right
+                .clearfix
+        .col-lg-3.col-md-6
+          .panel.panel-green
+            .panel-heading
+              .row
+                .col-xs-3
+                  i.fa.fa-credit-card.fa-5x
+                .col-xs-9.text-right
+                  .huge
+                    p 457
+                      span
+                      i.fa.fa-euro
+                  div Tarjetas de Credito
+            a(href='#')
+            
+              .panel-footer
+                span.pull-left Ver Detalles
+                span.pull-right
+                  i.fa.fa-arrow-circle-right
+                .clearfix
+      // /.row
+      .row
+        .col-lg-8
+          .panel.panel-default
+            .panel-heading
+              i.fa.fa-bar-chart-o.fa-fw
+              |  Evolución Ahorro/Inversión
+              .pull-right
+            // /.panel-heading
+            .panel-body
+              #morris-area-chart
+            // /.panel-body
+          // /.panel
+          .panel.panel-default
+            .panel-heading
+              i.fa.fa-bar-chart-o.fa-fw
+              |  Distribución de Gastos
+              .pull-right
+            // /.panel-heading
+            .panel-body
+                  #morris-donut-chart
