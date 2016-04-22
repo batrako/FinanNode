@@ -1,22 +1,21 @@
 extends layout
 
 block content
-  wrapper
-    nav.navbar.navbar-default.navbar-static-top(role='navigation', style='margin-bottom: 0')
+  #wrapper
+    nav.navbar.navbar-default.navbar-static(role='navigation', style='margin-bottom: 0')
       .navbar-header
         button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
           span.sr-only Toggle navigation
           span.icon-bar
           span.icon-bar
           span.icon-bar
-        a.navbar-brand(href='/') FinanNode by Batrako (Prototipo)
-      // /.navbar-header
+        a.navbar-brand(href='/') FinanNode by Batrako
       ul.nav.navbar-top-links.navbar-right
         li.dropdown
           a.dropdown-toggle(data-toggle='dropdown', href='#')
             i.fa.fa-tasks.fa-fw
             i.fa.fa-caret-down
-          ul.dropdown-menu.dropdown-tasks
+          ul.dropdown-menu.dropdown-tasks(style='margin-left: 2px;')
             li
               a(href='#')
                 div
@@ -67,7 +66,7 @@ block content
           a.dropdown-toggle(data-toggle='dropdown', href='#')
             i.fa.fa-bell.fa-fw
             i.fa.fa-caret-down
-          ul.dropdown-menu.dropdown-alerts
+          ul.dropdown-menu.dropdown-alerts(style='margin-left: -30px;')
             li
               a(href='#')
                 div
@@ -113,7 +112,7 @@ block content
           a.dropdown-toggle(data-toggle='dropdown', href='#')
             i.fa.fa-user.fa-fw
             i.fa.fa-caret-down
-          ul.dropdown-menu.dropdown-user
+          ul.dropdown-menu.dropdown-user(style='right:0;')
             li
               a(href='#')
                 i.fa.fa-user.fa-fw
@@ -221,6 +220,7 @@ block content
         // /.sidebar-collapse
       // /.navbar-static-side
     #page-wrapper
+      br
       .row
         .col-lg-12
           h1.page-header Resumen
@@ -250,7 +250,7 @@ block content
             .panel-heading
               .row
                 .col-xs-3
-                  i.fa.fa-credit-card.fa-5x
+                  i.fa.i.fa.fa-cc-visa.fa-5x
                 .col-xs-9.text-right
                   .huge
                     p 457
@@ -284,4 +284,7 @@ block content
               .pull-right
             // /.panel-heading
             .panel-body
-                  #morris-donut-chart
+              #morris-donut-chart
+    .navbar.navbar-default.navbar-fixed-bottom(role='navigation')
+      .container
+        .button.btn.pull-right.btn-danger.btn-circle.btn-lg +
