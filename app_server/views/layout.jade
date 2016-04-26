@@ -9,13 +9,22 @@ html
     link(rel='stylesheet', href='/stylesheets/sb-admin-2.css')
     link(rel='stylesheet', href='/stylesheets/morris.css')
     link(rel='stylesheet', href='/stylesheets/font-awesome.min.css', type='text/css')
+    link(rel='stylesheet', href='/stylesheets/dataTables.bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/dataTables.responsive.css')
+    link(rel='stylesheet', href='/stylesheets/dataTables.responsive.css')
   body
     block content
     script(src='/javascripts/jquery.min.js')
+    script(src='/javascripts/jquery.dataTables.min.js')
+    script(src='/javascripts/dataTables.bootstrap.min.js')
+    script(src='/javascripts/dataTables.responsive.js')
     script(src='/javascripts/metisMenu.js')
     script(src='/javascripts/raphael-min.js')
     script(src='/javascripts/sb-admin-2.js')
     script(src='/javascripts/morris-data.js')
     script(src='/javascripts/morris.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
-    
+    script(type='text/javascript')
+      $(document).ready(function() {
+      $('#dataTables-example').DataTable({ responsive: true});
+      });

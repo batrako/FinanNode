@@ -150,7 +150,7 @@ block content
                 span.fa.arrow
               ul.nav.nav-second-level
                 li
-                  a(href='/account') Personal
+                  a(href='/cuentas/Personal') Personal
                 li
                   a(href='/cuentas/Principal') Principal
               // /.nav-second-level
@@ -203,47 +203,46 @@ block content
       br
       .row
         .col-lg-12
-          h1.page-header Resumen
+          h1.page-header Detalle Cuenta Principal
         // /.col-lg-12
       // /.row
       .row
-        .col-lg-3.col-md-6
-          .panel.panel-primary
+        .col-lg-8
+          .panel.panel-info
             .panel-heading
               .row
-                .col-xs-3
-                  i.fa.fa-money.fa-5x
-                .col-xs-9.text-right
+                .col-xs-8
+                  p ES58 2101 7654 8739 9837
+                  span
+                  i.fa.fa-university
+                  |  La Caixa
+                .col-xs-4.text-right
                   .huge
-                    p 53.615
+                    p 458
                       span
-                      i.fa.fa-euro
-                  div Cuentas
-            a(href='#')
-              .panel-footer
-                span.pull-left Ver Detalles
-                span.pull-right
-                  i.fa.fa-arrow-circle-right
-                .clearfix
-        .col-lg-3.col-md-6
-          .panel.panel-green
-            .panel-heading
-              .row
-                .col-xs-3
-                  i.fa.i.fa.fa-cc-visa.fa-5x
-                .col-xs-9.text-right
-                  .huge
-                    p 457
-                      span
-                      i.fa.fa-euro
-                  div Tarjetas de Credito
-            a(href='#')
-            
-              .panel-footer
-                span.pull-left Ver Detalles
-                span.pull-right
-                  i.fa.fa-arrow-circle-right
-                .clearfix
+                      i.fa.fa-euro            
+            .panel-body
+                .dataTable_wrapper
+                    table#dataTables-example.table.table-striped.table-bordered.table-hover(width='100%')
+                      thead
+                        tr
+                          th Fecha
+                          th Concepto
+                          th Importe
+                      tbody
+                        tr.odd.gradeX
+                          td 26/04/2016
+                          td Prueba 1
+                          td +23.48
+                        tr.odd.gradeC
+                          td 26/04/2016
+                          td Prueba 2
+                          td -25.4
+                        tr.odd.gradeA
+                          td 26/04/2016
+                          td Prueba 3
+                          td -23.48                        
+
       // /.row
       .row
         .col-lg-8
@@ -268,4 +267,3 @@ block content
     .navbar.navbar-default.navbar-fixed-bottom(role='navigation')
       .container
         .button.btn.pull-right.btn-danger.btn-circle.btn-lg +
-        
