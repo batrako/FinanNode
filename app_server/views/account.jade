@@ -150,9 +150,9 @@ block content
                 span.fa.arrow
               ul.nav.nav-second-level
                 li
-                  a(href='/cuentas/Personal') Personal
+                  a(href='/account/Personal') Personal
                 li
-                  a(href='/cuentas/Principal') Principal
+                  a(href='/account/Principal') Principal
               // /.nav-second-level
             li
               a(href='#')
@@ -203,7 +203,7 @@ block content
       br
       .row
         .col-lg-12
-          h1.page-header Detalle Cuenta Principal
+          h1.page-header Detalle Cuenta Personal
         // /.col-lg-12
       // /.row
       .row
@@ -211,14 +211,14 @@ block content
           .panel.panel-info
             .panel-heading
               .row
-                .col-xs-8
-                  p ES58 2101 7654 8739 9837
+                .col-xs-7
+                  h6 ES58 2101 7654 8739 9837
                   span
                   i.fa.fa-university
                   |  La Caixa
-                .col-xs-4.text-right
-                  .huge
-                    p 458
+                .col-xs-5.text-right
+                  h3
+                    p 28765.53
                       span
                       i.fa.fa-euro            
             .panel-body
@@ -232,38 +232,25 @@ block content
                       tbody
                         tr.odd.gradeX
                           td 26/04/2016
-                          td Prueba 1
-                          td +23.48
+                          td Dividendos CaixaBank
+                          td
+                            h5(style='color:green') +23.48 €
+                              small 
+                                | (23.167 €)
                         tr.odd.gradeC
                           td 26/04/2016
-                          td Prueba 2
-                          td -25.4
+                          td Mercadona Terrassa
+                          td
+                            h5(style='color:red') -23.48 €
+                              small 
+                                | (23.150 €)
                         tr.odd.gradeA
                           td 26/04/2016
-                          td Prueba 3
-                          td -23.48                        
-
-      // /.row
-      .row
-        .col-lg-8
-          .panel.panel-default
-            .panel-heading
-              i.fa.fa-bar-chart-o.fa-fw
-              |  Evolución Ahorro/Inversión
-              .pull-right
-            // /.panel-heading
-            .panel-body
-              #morris-area-chart
-            // /.panel-body
-          // /.panel
-          .panel.panel-default
-            .panel-heading
-              i.fa.fa-bar-chart-o.fa-fw
-              |  Distribución de Gastos
-              .pull-right
-            // /.panel-heading
-            .panel-body
-              #morris-donut-chart
+                          td Carrefour Terrassa
+                          td
+                            h5(style='color:red') -23.48 €
+                              small 
+                                | (23.167 €)
     .navbar.navbar-default.navbar-fixed-bottom(role='navigation')
       .container
         .button.btn.pull-right.btn-danger.btn-circle.btn-lg +

@@ -26,5 +26,8 @@ html
     script(src='/bootstrap/js/bootstrap.min.js')
     script(type='text/javascript')
       $(document).ready(function() {
-      $('#dataTables-example').DataTable({ responsive: true});
-      });
+      $('#dataTables-example').DataTable( { 
+      "responsive": true,
+      "pageLength": 20
+      } );
+      } );
